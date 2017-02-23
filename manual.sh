@@ -5,6 +5,12 @@
 # author: Rev Taylor R Rainwater
 #   date: 23-03-2016
 
+# DEPENDENCIES
+# - GNU Parallel 20170122 or greater
+# - encript
+# - GhostScript
+# - col and man (if you don't have these then what are you doing?)
+
 # the various directories which contain the system commands
 r_bin="/bin/$1"
 r_sbin="/sbin/$1"
