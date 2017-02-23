@@ -52,7 +52,7 @@ manual_clean() {
     wait 
 }
 
-# This uses ghetto parallelism 
+# This uses ghetto parallelism on top of gnu parallel
 manual_main() {
     # Create all ps files from the man pages
     echo "!--BEGINNING--!"
