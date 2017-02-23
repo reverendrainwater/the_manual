@@ -11,6 +11,12 @@
 # - GhostScript
 # - col and man (if you don't have these then what are you doing?)
 
+# IDEAS
+# - maybe not use the directories
+# - if staying with directories, check they exist
+# - implement arguments; i.e. job control
+# - time the runtime
+
 # the various directories which contain the system commands
 r_bin="/bin/$1"
 r_sbin="/sbin/$1"
@@ -68,4 +74,4 @@ manual_main() {
     echo "OUTPUT FILE IS the_manual.pdf"
 }
 # Catch errors and put into logfile
-manual_main 2> the_manual.log
+time manual_main 2> the_manual.log
