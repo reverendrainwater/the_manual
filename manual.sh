@@ -15,7 +15,6 @@
 # - maybe not use the directories
 # - if staying with directories, check they exist
 # - implement arguments; i.e. job control
-# - time the runtime
 
 # the various directories which contain the system commands
 r_bin="/bin/$1"
@@ -71,7 +70,8 @@ manual_main() {
     manual_build
     # Clean
     manual_clean
-    echo "OUTPUT FILE IS the_manual.pdf"
+    echo "!--RUNTIME--!"
 }
-# Catch errors and put into logfile
+# Catch errors and put into logfile and time runtime
 time manual_main 2> the_manual.log
+echo "OUTPUT FILE IS the_manual.pdf"
