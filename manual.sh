@@ -24,7 +24,7 @@ u_sbin="/usr/sbin/$1"
 
 # process a command directory
 manual_process() {
-    ls $1 | parallel "man {} | col -bx > $2{}.txt && echo PROCESSED: {}"
+    ls $1 | parallel --shuf "man {} | col -bx > $2{}.txt && echo PROCESSED: {}"
     ls $2 | parallel "enscript -Bhqp $2{.}.ps $2{}"
 }
 
